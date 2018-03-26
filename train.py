@@ -8,9 +8,9 @@ from utils.sgd import SGD
 
 def parse_args():
   parser = argparse.ArgumentParser(description='SGD train and inference')
-  parser.add_argument('train')
-  parser.add_argument('test')
-  parser.add_argument('output')
+  parser.add_argument('train', help='path to the train dataset in CSV format')
+  parser.add_argument('test', help='path to the test dataset in CSV format')
+  parser.add_argument('output', help='output file path')
   return parser.parse_args()
 
 
@@ -33,7 +33,7 @@ def read_dataset(path, is_train):
   return dataset
 
 
-def CrossValidation(dataset, k, scale=False):
+def cross_validation(dataset, k, scale=False):
   size = dataset.shape[0]
   step = size // k
 
