@@ -80,7 +80,7 @@ if __name__ == '__main__':
 
   x_test = test_dataset[:, 1:]
 
-  sgd = SGD(x_train, y_train, x_train, y_train, batch_size=256, layers=[20], activation_f=[Sigmoid])
+  sgd = SGD(x_train, y_train, batch_size=256, layers=[20], activation_f=[Sigmoid])
   sgd.train(verbose=True, schedule=[[10000, 0.01], [10000, 0.001]])
   prediction = sgd.infer(x_test)
   prediction[prediction == 0] = -1
