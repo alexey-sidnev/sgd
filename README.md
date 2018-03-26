@@ -2,8 +2,10 @@
 Supports only Fully-Connected layers and Cross-Entropy loss.
 
 # Usage
-python train.py <train.csv> <test.csv> <submission.csv>
+```
+python3 train.py <train.csv> <test.csv> <submission.csv>
+```
 
 ## TODO
-  1. Add regularization
-  2. Batch elements balancing
+  1. Add regularization.
+  2. Batch elements balancing.
